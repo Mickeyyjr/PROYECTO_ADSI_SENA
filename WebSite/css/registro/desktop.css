@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Ubuntu', arial, serif;
+  }
+body{
+    background-color: #dddddd;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*MAIN*/
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+
+
+main{
+    background-color: #ffffff;
+    width:600px;
+    height: 700px;
+    padding: 40px 0px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+form label .nav{
+    display: flex;
+    flex-direction: column; 
+}
+main h4{
+    font-size: 1.5rem;
+    padding: 0px 40px;
+}
+.nav{
+    width: 240px;
+    height: 40px;
+    margin: 0px 10px;
+    padding: 10px;
+}
+form input{
+    border-radius: 10px;
+    border: black solid 1px;
+}
+form select{
+    border-radius: 10px;
+    border: black solid 1px;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+}
+select{
+    font-size: 1.5rem;
+}
+
+main .send{
+    background-color: #6BD6D3;
+    width: 246px;
+    height: 75px;
+    border: none;
+    border-radius: 37px;
+    font-size: 4rem;
+    color: #ffffff;
+}
+button{
+    border: none;
+    background: none;
+}
