@@ -1,0 +1,125 @@
+html {
+  font-size: 62.5%; /*Hack para convertir 10px = 1rem*/
+  box-sizing: border-box; /*Hack para box model*/
+  scroll-snap-type: y mandatory;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px; /*1rem = 10px*/
+  font-family: "Ubuntu", sans-serif;
+  background-color: lightgray;
+  margin: 0 0;
+}
+:root {
+  --gris: rgba(221, 221, 221, 1);
+  --blanco: #ffffff;
+  --azul: rgba(107, 214, 211, 1);
+  --oscuro: rgba(100, 126, 130, 1);
+}
+
+.contenedor {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 12rem;
+  padding-top: 3rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-left: 5rem;
+  color: var(--blanco);
+  align-items: flex-start;
+  margin: 0;
+}
+
+h1 .acces {
+  margin-left: 5rem;
+}
+
+.navegacion-principal a {
+  text-decoration: none;
+  color: var(--blanco);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 5rem;
+}
+.navegacion-principal a:hover {
+  color: var(--azul);
+}
+
+.bg {
+  background-image: url(Img/control_acceso.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: auto;
+}
+
+.contenido-header {
+  position: auto; /**Sirve para poner transparencia a la imagen**/
+  background-color: rgba(0, 0, 0, 0.7); /**color de transparencia**/
+  height: 100%;
+  width: 100%;
+}
+
+/*main*/
+
+.elemento img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.elemento {
+  background: var(--azul);
+  border-radius: 4rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4rem;
+  padding-bottom: 2rem;
+}
+
+main .elemento {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 7rem;
+}
+
+main .elemento p {
+  background-color: var(--gris);
+  color: black;
+  padding: 2rem 2rem;
+
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+footer {
+  text-align: center;
+  background: rgba(100, 126, 130, 1);
+  color: black;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+main .elemento:hover {
+  background: var(--gris);
+}
