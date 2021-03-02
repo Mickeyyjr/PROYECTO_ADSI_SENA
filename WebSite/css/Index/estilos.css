@@ -17,9 +17,6 @@ body {
   font-family: "Ubuntu", sans-serif;
   height: 100%;
   background-color: lightgray;
-  background-image: url(../../Img/backgraund.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 :root {
   --gris: rgba(221, 221, 221, 1);
@@ -27,59 +24,51 @@ body {
   --azul: rgba(107, 214, 211, 1);
   --oscuro: rgba(100, 126, 130, 1);
 }
-
-.contenedor {
-  width: 85%;
-  margin: 0 auto;
-  margin-top: 0;
+header{
+  height: 390px;
+  background-image: url(../../Img/backgraundMovile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-bottom: 12rem;
-  padding-top: 3rem;
-}
-
-h1 {
+h1{
+  color: var(--blanco);
   font-size: 4rem;
-  margin-left: 5rem;
-  color: var(--blanco);
-  align-items: flex-start;
+  font-weight: 700;
+  line-height: 4.5rem;
+  text-align: center;
   margin: 0;
+  padding: 50px 0;
+}
+h1::first-letter{
+  font-size: 6rem;
 }
 
-h1 .acces {
-  margin-left: 5rem;
+.navegacion-principal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.navegacion-principal a {
+.navegacion-principal a{
+  color: #ffffff;
   text-decoration: none;
-  color: var(--blanco);
-  font-size: 2rem;
-  font-weight: bold;
-  margin-left: 5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.8rem;
 }
-.navegacion-principal a:hover {
+.navegacion-principal a:hover{
   color: var(--azul);
 }
 
-
-.contenido-header {
-  position: auto; /**Sirve para poner transparencia a la imagen**/
-  background-color: rgba(0, 0, 0, 0.7); /**color de transparencia**/
-  height: 100%;
-  width: 100%;
-}
-
 /*main*/
-main{
+.container{
+  height: auto;
+  width: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
 }
-.contenedor section figure{
+
+.card-container figure{
   background-color: var(--gris);
   width: 130px;
   height: 120px;
@@ -88,12 +77,38 @@ main{
   justify-content: center;
   align-items: center;
 }
-section figure img{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+figure .dataSecurity--card{
+  display: inline-block;
+  width: 82px;
+  height: 90px;
+  margin-bottom: 10px;
+  background-image: url(../../Img/data-security.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.contenedor section div{
+figure .personalSecurity--card{
+  display: inline-block;
+  width: 82px;
+  height: 90px;
+  margin-bottom: 10px;
+  background-image: url(../../Img/personal-security.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+figure .securityGate--card{
+  display: inline-block;
+  width: 82px;
+  height: 90px;
+  margin-bottom: 10px;
+  background-image: url(../../Img/security-gate.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.detail-card{
   background-color: var(--azul);
   border-radius: 50px;
   width: 300px;
@@ -101,18 +116,14 @@ section figure img{
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.contenedor section div:hover{
-  box-shadow: 0 1px 1px var(--gris)
-
-}
-.contenedor section p{
   font-size: 2.2rem;
   color: var(--blanco);
   text-align: center;
   cursor:default;
 }
-
+.contenedor article div:hover{
+  box-shadow: 0 1px 1px var(--gris);
+}
 /*FOOTER*/
 
 footer{
