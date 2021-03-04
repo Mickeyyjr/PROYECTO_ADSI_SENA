@@ -1,37 +1,7 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-html {
-    font-size: 62.5%;
-    font-family: 'Ubuntu', arial, serif;
-  }
-body{
-    background-color: #dddddd;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main{
+    width:600px;   
 }
 
-/*MAIN*/
-main{
-    background-color: #ffffff;
-    width:600px;
-    height: 700px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
-form label .nav{
-    display: flex;
-    flex-direction: column; 
-}
 main h2{
     font-size: 4rem;
 }
@@ -41,12 +11,6 @@ main h2{
 }
 .email input{
     width: 480px;
-    height: 47px;
-    font-size: 2rem;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: solid 2px black;
 }
 .contrase span{
     font-size: 2.5rem;
@@ -54,24 +18,8 @@ main h2{
 }
 .contrase input{
     width: 480px;
-    height: 47px;
-    font-size: 2rem;
-    margin: 10px;
-    padding-left: 10px;
-    border-radius: 5px;
-    border: solid 2px black;
 }
-label .link{
-    color: #6BD6D3;
-    font-size: 2rem;
-    text-decoration: none;
-}
+
 main button{
-    background-color: #6BD6D3;
-    width: 480px;
-    height: 75px;
-    border: none;
-    border-radius: 37px;
-    font-size: 4rem;
-    color: #ffffff;
+    width: 90%;  
 }

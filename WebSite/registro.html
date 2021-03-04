@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/registro/phone.css">
-    <link rel="stylesheet" href="css/registro/tablet.css" media="screen and (min-width:600px)"/>
-    <link rel="stylesheet" href="css/registro/desktop.css" media="screen and (min-width:800px)"/>
+    <link rel="stylesheet" href="css/registro/desktop.css" media="(min-width:600px)"/>
 
 
     <title>Registro</title>
@@ -14,7 +13,7 @@
     <main>
         <h4>REGISTRO USUARIOS NUEVOS, LLENE TODOS LOS CAMPOS</h2>
 
-        <form action="">
+        <form class="lastname" action="">
             <label class="name" for="name">
                 <span class="nav" >Nombres*</span>
                 <input class="nav" type="text" id="name" required placeholder="Tus Nombres" />
@@ -28,7 +27,7 @@
         </form>
 
 
-        <form action="">
+        <form class="documentype" action="">
             <label class="document" for="document">
                 <span class="nav">Tipo de Documento*</span>
                 <select class="nav" name="document" id="document">
@@ -49,25 +48,6 @@
             <label for="email">
                 <span class="nav">Email*</span>
                 <input class="nav" type="email" name="email" id="email" required autocomplete="email"> 
-            </label>
-        </form>
-
-        <form action="">
-            <label class="perfil" for="perfil">
-                <span class="nav">Tipo de Documento*</span>
-                <select class="nav" name="perfil" id="document" required>
-                    <option value="1">perfil 1</option>
-                    <option value="2">perfil 2</option>
-                    <option value="3">perfil 3</option>
-                </select>
-            </label>
-            <label class="curso" for="curso">
-                <span class="nav">Tipo de Documento*</span>
-                <select class="nav" name="curso" id="curso" required>
-                    <option value="1">curso 1</option>
-                    <option value="2">curso 2</option>
-                    <option value="3">curso 3</option>
-                </select>
             </label>
         </form>
 
