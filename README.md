@@ -1,25 +1,40 @@
 
-PROYECTO SISTEMAS DE INGRESO
+KONTROL ACCESS
  
-![Screenshot](logo.png)
+
 
 OBJETIVO GENERAL
 
-En primer lugar, se implementa un aplicativo que brinde seguridad al colegio Nuestra Señora De Fátima. El producto llegara a hacer que este proyecto sea implementado en la institución y con gran afinidad su elaboración realizara un buen servicio que es generar seguridad a los estudiantes, docente, coordinadores y el rector. 
-
-OBJETIVOS ESPECIFICOS
-
-•	Implementar un sistema de información para el ingreso de la comunidad educativa.
-•	Control de acceso para la comunidad educativa a través del sistema de información.
-•	Crear un control de seguridad para garantizar la protección de los datos del usuario.
+- Garantizar seguridad a la institución y por consiguiente al usuario, 
+implementando un sistema de información eficiente, óptimo y funcional.
 
 
-JUSTIFICACION
+OBJETIVOS ESPECÍFICOS
 
-Controlar el sistema de ingreso a la institución Nuestra Señora De Fátima de una manera óptima y organizada, permitiendo el control de los usuarios que ingresan. Usando sistemas de detección de huella dactilar, para que de este modo se pueda determinar quién entra, o quien intenta entrar, y determinar si está permitido su ingreso.
+•	Diseñar, organizar y estructurar el aplicativo con base al levantamiento de información.
+•	Elaborar el sistema de información con relación   a los requerimientos de la institución.
+•	Realizar pruebas para que la funcionalidad de la aplicación no presente fallos y funcione correctamente.
 
 
-ALCANSE DEL PROYECTO
+PLANTEAMIENTO DEL PROBLEMA
+¿Se ha puesto a pensar usted como es el protocolo de ingreso que tiene la institución educativa Nuestra Señora de Fátima?  Cuando ingresamos a la institución no se lleva a cabo un control de acceso para la comunidad educativa.
+¿Como sabemos que las personas que ingresan a la institución hacen parte de la institución? Es un problemática ya que no se lleva a cabo un control de acceso y un proceso de registro - verificación.
 
 
-Organizar las entradas y salidas de una manera más rápida y con seguridad para toda la institución y por consiguiente a la comunidad educativa como lo son: Docentes, coordinadores, secretarios y estudiantes.
+
+ALCANCE DEL PROYECTO
+
+
+El alcance del proyecto tendrá como objetivo garantizar la seguridad de la institución implementando el sistema de información de registro/ingreso a través del aplicativo,  cubrirá toda la comunidad educativa, en los que se hacen partícipes los siguientes perfiles:
+Estudiantes, docentes, directivos, padres de familia y empleados.
+
+El tiempo de desarrollo del proyecto tiene un tiempo estimado de 14 meses.
+
+
+
+JUSTIFICACIÓN
+
+Sistema que  genera un control de acceso a la institución de una manera óptima y organizada, permitiendo el control de las personas que ingresan. 
+
+Verificación del usuario para conceder su ingreso. Así mismo garantizar la seguridad en la institución, ya que si el usuario no se encuentra registrado en el sistema de información su acceso será denegado.
+
