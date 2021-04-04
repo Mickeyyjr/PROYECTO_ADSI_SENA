@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/globales.css">
+    <link rel="stylesheet" href="../css/registro.css">
+    <title>Registro</title>
+</head>
+
+<body>
+    <div class="formulario contenedor-form">
+        <form action="../includes/funciones.php" method="POST" class="formulario-registro">
+            <fieldset>
+                <div class="img-logo">
+                    <legend> <img src="../img/1.png" class="img-1" alt="logo-kontrolaccess"></legend>
+                </div>
+                <div class="inputs">
+                    <input type="number" name="id_persona" placeholder="Ingrese numero de documento" class="campo">
+                    <input type="text" name="tipo_id" placeholder="Tipo de documento" class="campo">
+                    <input type="text" name="nombre" placeholder="Nombre" class="campo">
+                    <input type="text" name="apellido" placeholder="Apellido" class="campo">
+                    <input type="email" name="email" placeholder="Email" class="campo">
+                    <input type="text" name="rol" placeholder="Rol" class="contraseña campo">
+                    <button type="submit" name="enviar" value="Procesar" class="btn campo">Crear cuenta</button>
+                </div>
+                <div class="inicia-sesion">
+                    <p class="parrafo">¿Ya tienes una cuenta? <a href="iniciar-sesion.html">Inicia sesión</a></p>
+                </div>
+            </fieldset>
+
+
+        </form>
+    </div>
+</body>
+
+</html>

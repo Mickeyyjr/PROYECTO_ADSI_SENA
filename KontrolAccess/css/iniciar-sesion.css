@@ -1,0 +1,79 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3.5rem;
+}
+
+.formulario-registro {
+  border: none;
+
+  width: 40%;
+}
+
+.img-1 {
+  width: 8rem;
+}
+
+.contenedor-form {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.campo {
+  width: 80%;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  border-color: black;
+  border-radius: 0.4rem;
+  border-width: 0.3rem;
+}
+.img-logo {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.contraseña {
+  margin-bottom: 4rem;
+}
+
+.btn {
+  background-color: var(--negro);
+  color: var(--blanco);
+  border: none;
+  font-weight: 700;
+  font-size: 1.8rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+fieldset {
+  border-color: black;
+}
+.inicia-sesion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 7rem;
+}
+.parrafo {
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+  color: var(--azul);
+}
