@@ -15,7 +15,7 @@ function registrarUsuarios()
             $email = $_POST['email'];
             $rol = $_POST['rol'];
 
-            $sql = "INSERT INTO persona(id_persona, tipo_identificacion, nombres, apellidos, email, rol)
+            $sql = "INSERT INTO persona(id_persona, tipo_id, nombres, apellidos, email, rol)
                         VALUES('$id_persona', '$tipo_id', '$nombre', '$apellido', '$email', '$rol');";
 
             if ($db->query($sql) === true) {

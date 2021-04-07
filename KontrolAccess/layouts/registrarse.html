@@ -12,21 +12,60 @@
 
 <body>
     <div class="formulario contenedor-form">
-        <form action="../includes/registro.php" method="POST" class="formulario-registro">
+        <form action="../includes/registrar_usuarios.php" method="POST" class="formulario-registro">
             <fieldset>
                 <div class="img-logo">
                     <legend> <img src="../img/1.png" class="img-1" alt="logo-kontrolaccess"></legend>
                 </div>
                 <div class="inputs">
-                    <input type="number" name="id_persona" placeholder="Ingrese numero de documento" class="campo">
-                    <input type="text" name="tipo_id" placeholder="Tipo de documento" class="campo">
-                    <input type="text" name="nombre" placeholder="Nombre" class="campo">
-                    <input type="text" name="apellido" placeholder="Apellido" class="campo">
-                    <input type="email" name="email" placeholder="Email" class="campo">
-                    <input type="text" name="rol" placeholder="Rol" class="contraseña campo">
-                    <button type="submit" name="enviar" value="Procesar" class="btn campo">Crear cuenta</button>
-                </div>
+                    <div class="seccion">
+                        <label>Tipo de documento de identidad</label>
+                        <select name="tipo_id" id="" class="campo">
+                            <option value="seleccione">Seleccione</option>
+                            <option value="CC">Cédula de Ciudadania</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="RC">Registro Civil</option>
+                        </select>
+                    </div>
+
+                    <div class="seccion">
+                        <label>Número de documento</label>
+                        <input type="number" name="id_persona" placeholder="Ingrese numero de documento" class="campo">
+                    </div>
+
+                    <div class="seccion">
+                        <label>Nombres</label>
+                        <input type="text" name="nombre" placeholder="Nombre" class="campo">
+                    </div>
+
+                    <div class="seccion">
+                        <label>Apellidos</label>
+                        <input type="text" name="apellido" placeholder="Apellido" class="campo">
+                    </div>
+
+                    <div class="seccion">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Email" class="campo">
+                    </div>
+
+
+                    <div class="seccion">
+                        <label>Rol</label>
+                        <select name="rol" id="" class="campo">
+                            <option value="seleccione">Seleccione</option>
+                            <option value="estudiante">Estudiante</option>
+                            <option value="docente">Docente</option>
+                            <option value="directivo">Directivo</option>
+                            <option value="acudiente">Acudiente</option>
+                            <option value="empleado">Empleado</option>
+                        </select>
+                    </div>
+
+                </div>    
+                   
+                
                 <div class="inicia-sesion">
+                    <button type="submit" name="enviar" value="Procesar" class="btn ">Crear cuenta</button>
                     <p class="parrafo">¿Ya tienes una cuenta? <a href="iniciar-sesion.html">Inicia sesión</a></p>
                 </div>
             </fieldset>
@@ -34,6 +73,8 @@
 
         </form>
     </div>
+
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
