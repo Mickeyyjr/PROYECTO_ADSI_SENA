@@ -77,3 +77,8 @@ a {
   text-decoration: none;
   color: var(--azul);
 }
+@media (max-width: 842px){
+  .formulario-registro{
+    width: 100%;
+  }
+}

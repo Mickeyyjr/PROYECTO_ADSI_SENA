@@ -1,7 +1,7 @@
 /*Estilos para el HEADER*/
 header {
+  height: 100px;
   padding: 1rem 1.5rem;
-
   background-color: var(--blanco);
 }
 
@@ -114,7 +114,7 @@ header {
 }
 
 .contenido-informacion {
-  padding: 4rem;
+  padding: 1rem;
 }
 .titulo-informacion {
   color: var(--blanco);
@@ -166,4 +166,32 @@ footer {
   color: var(--blanco);
   padding: 0.1rem 0;
   text-align: center;
+}
+@media (max-width: 842px){
+
+  .contenido-header{
+    height: auto;
+  }
+  .nav-principal nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-principal nav a{
+    margin: 10px;
+    font-size: 1.5rem;
+  }
+  .titulo-main{
+    font-size: 3rem;
+  }
+  .titulo-informacion{
+    font-size: 3rem;
+  }
+  .contenedor-informacion{
+    height: auto;
+  }
+  .contenido-informacion{
+    flex-direction: column;
+  }
 }
