@@ -1,65 +1,41 @@
 <?php
 
 
-//Función para registrar a los usuarios 
+// Función que registra a los usuarios
 function registrarUsuarios()
 {
-    try {
-        include 'conexion.php';
+    include 'conexion.php';
 
-        if (isset($_POST['id_persona'], $_POST['tipo_id'], $_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['rol'])) {
-            $id_persona = $_POST['id_persona'];
-            $tipo_id = $_POST['tipo_id'];
-            $nombre = $_POST['nombre'];
-            $apellido = $_POST['apellido'];
-            $email = $_POST['email'];
-            $rol = $_POST['rol'];
+    if (isset($_POST['enviar'])) {
+        if (strlen($_POST['tipo_id']) >= 1 && strlen($_POST['id_persona']) >= 1 && strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1 && strlen($_POST['email']) >= 1 && strlen($_POST['rol']) >= 1) {
+            $tipo_id = ($_POST['tipo_id']);
+            $id_persona = ($_POST['id_persona']);
+            $nombre = ($_POST['nombre']);
+            $apellido = ($_POST['apellido']);
+            $email = ($_POST['email']);
+            $rol = ($_POST['rol']);
 
-            $sql = "INSERT INTO persona(id_persona, tipo_id, nombres, apellidos, email, rol)
-                        VALUES('$id_persona', '$tipo_id', '$nombre', '$apellido', '$email', '$rol');";
+            $insertar = "INSERT INTO persona(tipo_id, id_persona, nombre, apellido, email, rol)
+        VALUES('$tipo_id', '$id_persona', '$nombre', '$apellido', '$email', '$rol');";
 
-            if ($db->query($sql) === true) {
-                echo 'Datos insertados correctamente';
+            $resultado = mysqli_query($conexion, $insertar);
+
+
+
+            if ($resultado) {
+?>
+                <script src="../js/mensajeCorrecto.js"></script>
+            <?php
             } else {
-                die('Error al insertar datos .$db->error');
+            ?>
+                <script src="../js/mensajeIncorrecto.js"></script>
+            <?php
             }
-        };
-    } catch (\Throwable $th) {
-
-        var_dump($th);
-    }
-};
-
-
-
-
-//Función para mostrar los registros
-function mostrarRegistros()
-{
-    try {
-
-        include 'conexion.php';
-
-        $registrosPersona = 'SELECT * FROM persona;';
-        $consulta = mysqli_query($db, $registrosPersona);
-
-        $registros = [];
-        $i = 0;
-
-        while ($row = mysqli_fetch_assoc($consulta)) {
-            $registros[$i]['id_persona'] = $row['id_persona'];
-            $registros[$i]['tipo_identificacion'] =  $row['tipo_identificacion'];
-            $registros[$i]['nombres'] =  $row['nombres'];
-            $registros[$i]['apellidos'] =  $row['apellidos'];
-            $registros[$i]['email'] = $row['email'];
-            $registros[$i]['rol'] =  $row['rol'];
-
-            $i++;
+        } else {
+            ?>
+            <script src="../js/lleneCampos.js"></script>
+<?php
         }
-
-        return $registros;
-    } catch (\Throwable $th) {
-
-        var_dump($th);
     }
 }
+?>

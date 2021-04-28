@@ -21,15 +21,26 @@
   margin: 0 auto;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 3rem;
+  -webkit-appearance: none;
 }
 
 .campo {
   width: 50%;
-
+  outline: none;
   padding: 1rem 0.5rem;
   border-color: black;
   border-radius: 0.4rem;
@@ -69,7 +80,7 @@ fieldset {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 }
 .parrafo {
   color: grey;
@@ -91,6 +102,36 @@ label {
   font-size: 1.5rem;
 }
 
-.contorno {
+.correcto {
+  text-align: center;
+  background-color: rgb(19, 255, 30);
+  color: white;
+  padding: 1rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.error {
+  text-align: center;
+  background-color: red;
+  color: black;
+  padding: 1rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.ok {
+  border-color: rgb(0, 255, 0);
+}
+
+.incorrecto {
+  color: red;
+}
+.incorrecto input {
+  border-color: red;
+}
+.incorrecto select {
   border-color: red;
 }

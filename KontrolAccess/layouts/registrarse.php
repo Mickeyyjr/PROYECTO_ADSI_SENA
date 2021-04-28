@@ -12,46 +12,48 @@
 
 <body>
     <div class="formulario contenedor-form">
-        <form action="../includes/registrar_usuarios.php" method="POST" class="formulario-registro">
+        <form method="POST" class="formulario-registro">
             <fieldset>
                 <div class="img-logo">
                     <legend> <img src="../img/1.png" class="img-1" alt="logo-kontrolaccess"></legend>
                 </div>
                 <div class="inputs">
-                    <div class="seccion">
+                    <div class="seccion seccion-tipoid">
                         <label>Tipo de documento de identidad</label>
-                        <select name="tipo_id" id="" class="campo">
+                        <select name="tipo_id" class="campo tipoId">
                             <option value="seleccione">Seleccione</option>
                             <option value="CC">Cédula de Ciudadania</option>
                             <option value="TI">Tarjeta de Identidad</option>
                             <option value="RC">Registro Civil</option>
                         </select>
+
                     </div>
 
-                    <div class="seccion">
+                    <div class="seccion seccion-idpersona">
                         <label>Número de documento</label>
-                        <input type="number" name="id_persona" placeholder="Ingrese numero de documento" class="campo">
+                        <input type="number" name="id_persona" placeholder="Ingrese numero de documento" class="campo" id="idPersona">
+
                     </div>
 
-                    <div class="seccion">
+                    <div class="seccion seccion-nombre">
                         <label>Nombres</label>
-                        <input type="text" name="nombre" placeholder="Nombre" class="campo">
+                        <input type="text" name="nombre" placeholder="Nombre" class="campo" id="nombre">
                     </div>
 
-                    <div class="seccion">
+                    <div class="seccion seccion-apellido">
                         <label>Apellidos</label>
-                        <input type="text" name="apellido" placeholder="Apellido" class="campo">
+                        <input type="text" name="apellido" placeholder="Apellido" class="campo" id="apellido">
                     </div>
 
-                    <div class="seccion">
+                    <div class="seccion seccion-email">
                         <label>Email</label>
-                        <input type="email" name="email" placeholder="Email" class="campo">
+                        <input type="email" name="email" placeholder="Email" class="campo" id="email">
                     </div>
 
 
-                    <div class="seccion">
+                    <div class="seccion seccion-rol">
                         <label>Rol</label>
-                        <select name="rol" id="" class="campo">
+                        <select name="rol" class="campo rol">
                             <option value="seleccione">Seleccione</option>
                             <option value="estudiante">Estudiante</option>
                             <option value="docente">Docente</option>
@@ -61,20 +63,24 @@
                         </select>
                     </div>
 
-                </div>    
-                   
-                
+                </div>
+
+
                 <div class="inicia-sesion">
-                    <button type="submit" name="enviar" value="Procesar" class="btn ">Crear cuenta</button>
+                    <input type="submit" name="enviar" value="Crear cuenta" class="btn ">
                     <p class="parrafo">¿Ya tienes una cuenta? <a href="iniciar-sesion.html">Inicia sesión</a></p>
                 </div>
+                <div class="contenedor-mensaje">
+                    <?php
+                    include '../includes/registrarUsuarios.php';
+                    ?>
+                </div>
             </fieldset>
-
-
         </form>
+
     </div>
 
-    <script src="../js/app.js"></script>
+    <script src="../js/validarCampos.js"></script>
 </body>
 
 </html>
