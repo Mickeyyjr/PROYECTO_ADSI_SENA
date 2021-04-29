@@ -15,7 +15,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 :root {
-  --azul: rgba(107, 214, 211, 1);
+  --azul: #2fb1b6;
   --blanco: #ffffff;
   --negro: #000000;
 }

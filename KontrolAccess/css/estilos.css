@@ -1,40 +1,44 @@
 /*Estilos para el HEADER*/
+.parte-arriba {
+  padding: 2rem 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 header {
   padding: 1rem 1.5rem;
 
-  background-color: var(--blanco);
+  background-color: var(--azul);
 }
 
-.contenido-header {
+/* .contenido-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
-}
+} */
 
 .img-1 {
   width: 5rem;
 }
 
+.nav-principal nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
 .nav-principal nav a {
   text-decoration: none;
-  color: var(--negro);
-  font-size: 2rem;
+  color: var(--blanco);
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-left: 11rem;
 }
 
 .nav-principal a:hover {
   text-decoration: underline;
-}
-
-.nav-principal a.asistencia {
-  background-color: var(--negro);
-  color: var(--blanco);
-  padding: 1.5rem 1.5rem;
-  border-radius: 1rem;
-  font-weight: 700;
-  margin-right: 2rem;
 }
 
 .logo {

@@ -1,30 +1,47 @@
 <?php
 
-include 'conexion.php';
 
-if (isset($_POST['id_persona'], $_POST['tipo_id'], $_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['rol'])) {
-    $id_persona = $_POST['id_persona'];
-    $tipo_id = $_POST['tipo_id'];
-    $nombre = $_POST['nombre'];
-    $apellido = $_POST['apellido'];
-    $email = $_POST['email'];
-    $rol = $_POST['rol'];
-
-    $sql = "INSERT INTO persona(id_persona, tipo_identificacion, nombres, apellidos, email, rol)
-                        VALUES('$id_persona', '$tipo_id', '$nombre', '$apellido', '$email', '$rol');";
-
-    if ($db->query($sql) === true) {
-        echo 'Datos insertados correctamente';
-    } else {
-        die('Error al insertar datos .$db->error');
-    }
-};
-
-function mostrarRegistros()
+// Función que registra a los usuarios
+function registrarUsuarios()
 {
-    $datos = 'SELECT * FROM persona';
+    include 'conexion.php';
 
-    echo $datos;
-};
+    if (isset($_POST['enviar'])) {
+        if (strlen($_POST['tipo_id']) >= 1 && strlen($_POST['id_persona']) >= 1 && strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1 && strlen($_POST['email']) >= 1 && strlen($_POST['rol']) >= 1) {
+            $tipo_id = ($_POST['tipo_id']);
+            $id_persona = ($_POST['id_persona']);
+            $nombre = ($_POST['nombre']);
+            $apellido = ($_POST['apellido']);
+            $email = ($_POST['email']);
+            $rol = ($_POST['rol']);
 
-mostrarRegistros();
+            $insertar = "INSERT INTO persona(tipo_id, id_persona, nombre, apellido, email, rol)
+        VALUES('$tipo_id', '$id_persona', '$nombre', '$apellido', '$email', '$rol');";
+
+            $resultado = mysqli_query($conexion, $insertar);
+
+
+
+            if ($resultado) {
+?>
+                <script>
+                    mensajeCorrecto();
+                </script>
+            <?php
+            } else {
+            ?>
+                <script>
+                    mensajeError();
+                </script>
+            <?php
+            }
+        } else {
+            ?>
+            <script>
+                mensajeCompletar();
+            </script>
+<?php
+        }
+    }
+}
+?>
