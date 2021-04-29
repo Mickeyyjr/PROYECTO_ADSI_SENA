@@ -24,16 +24,22 @@ function registrarUsuarios()
 
             if ($resultado) {
 ?>
-                <script src="../js/mensajeCorrecto.js"></script>
+                <script>
+                    mensajeCorrecto();
+                </script>
             <?php
             } else {
             ?>
-                <script src="../js/mensajeIncorrecto.js"></script>
+                <script>
+                    mensajeError();
+                </script>
             <?php
             }
         } else {
             ?>
-            <script src="../js/lleneCampos.js"></script>
+            <script>
+                mensajeCompletar();
+            </script>
 <?php
         }
     }
