@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/mensajes.css">
     <script src="../js/mensajes.js"></script>
     <title>Registro</title>
 </head>
@@ -33,8 +34,8 @@
         <div class="nav-principal">
             <nav>
                 <a href="../layouts/index.html" class="inicio">Inicio</a>
-                <a href="../layouts/iniciar-sesion.html" class="iniciarSesion">Iniciar sesión</a>
-                <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/registrarse.php" class="registrarse">Registrarse</a>
+                <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/iniciar-sesion.php" class="iniciarSesion">Iniciar sesión</a>
+                <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/verificarUsuario.php" class="registrarse">Registrarse</a>
                 <a href="#" class="asistencia">Asistencia</a>
             </nav>
         </div>
@@ -54,6 +55,8 @@
 
             </div>
             <div class="inputs">
+
+
                 <div class="seccion seccion-tipoid">
                     <label>Tipo de documento de identidad</label>
                     <select name="tipo_id" class="campo tipoId">
@@ -125,6 +128,11 @@
     </footer>
 
     <script src="../js/validarCampos.js"></script>
+
+    <script>
+        llamarValidadorInput();
+        llamarValidadorSelect();
+    </script>
 
 </body>
 

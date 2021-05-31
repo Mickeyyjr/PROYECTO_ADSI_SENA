@@ -34,3 +34,27 @@ function mensajeCorrecto(){
                  
              }, 5000);
             }
+
+            function mensajeLogin(){
+                const contenedor = document.querySelector('.contenedor-mensaje');
+                 const bad = document.createElement('P');
+                 bad.classList.add('error');
+                 bad.textContent = 'Nombre de usuario o contraseña incorrectos.';
+                 contenedor.appendChild(bad);
+                  setTimeout(() => {
+                     bad.remove();
+                     
+                 }, 5000);
+                }
+
+                function mensajeUsuario(){
+                    const contenedor = document.querySelector('.contenedor-mensaje');
+                     const bad = document.createElement('P');
+                     bad.classList.add('error');
+                     bad.textContent = 'El usuario ya existe.';
+                     contenedor.appendChild(bad);
+                      setTimeout(() => {
+                         bad.remove();
+                         
+                     }, 5000);
+                    }

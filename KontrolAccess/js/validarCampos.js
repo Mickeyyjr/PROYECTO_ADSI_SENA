@@ -19,6 +19,8 @@ const expresiones = {
 }
 
 
+
+
 const campos = {
     tipoId:false,
     id:false,
@@ -28,9 +30,7 @@ const campos = {
     rol:false
 }
 
-selects[0].addEventListener('input', function(e){
-    console.log(e.target.value);
-})
+
 
 
 function validarCampo(e){
@@ -128,15 +128,17 @@ function validarSelect(e){
 
 // Iterar los inputs
 
-
+function llamarValidadorInput(){
 inputs.forEach(function(input){
     input.addEventListener('keyup', validarCampo) // keyup valida cuando se oprime una tecla en un input
     input.addEventListener('blur', validarCampo) // blur es un evento que se ejecuta cuando se presiona fuera un input
     input.addEventListener('onload', validarCampo)
-})
+})}
 
+
+function llamarValidadorSelect(){
 selects.forEach(function(select){
     select.addEventListener('change', validarSelect) // keyup valida cuando se oprime una tecla en un input
     select.addEventListener('blur', validarSelect) // blur es un evento que se ejecuta cuando se presiona fuera un input
-})
+})}
 

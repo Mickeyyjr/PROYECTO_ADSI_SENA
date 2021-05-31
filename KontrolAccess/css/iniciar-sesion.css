@@ -49,8 +49,9 @@
   padding: 1rem 0.2rem;
   border-color: black;
   border-radius: 0.4rem;
-  border-width: 0.3rem;
+  border-width: 0.1rem;
   font-size: 1.4rem;
+  outline: none;
 }
 .img-logo {
   margin-top: 4rem;
@@ -92,4 +93,12 @@ fieldset {
 a {
   text-decoration: none;
   color: var(--azul);
+}
+
+.ok {
+  border-color: rgb(0, 255, 0);
+}
+
+.erro {
+  border-color: red;
 }
