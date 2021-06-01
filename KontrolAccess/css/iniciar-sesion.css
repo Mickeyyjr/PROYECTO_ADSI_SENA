@@ -6,14 +6,29 @@
   padding-top: 3.5rem;
 }
 
-.formulario-registro {
+.formulario-login {
   border: none;
-
+  background-color: #eeeeee;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
   width: 40%;
+  border-radius: 2rem;
 }
 
-.img-1 {
-  width: 8rem;
+.titulo {
+  margin: 0;
+  padding: 0;
+  padding-top: 5rem;
+  font-size: 3.4rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+}
+
+.linea {
+  background-color: var(--azul);
+  padding: 0.2rem;
+  margin-bottom: 6rem;
 }
 
 .contenedor-form {
@@ -31,10 +46,12 @@
 .campo {
   width: 80%;
   margin-top: 1.5rem;
-  padding: 1.5rem;
+  padding: 1rem 0.2rem;
   border-color: black;
   border-radius: 0.4rem;
-  border-width: 0.3rem;
+  border-width: 0.1rem;
+  font-size: 1.4rem;
+  outline: none;
 }
 .img-logo {
   margin-top: 4rem;
@@ -76,4 +93,12 @@ fieldset {
 a {
   text-decoration: none;
   color: var(--azul);
+}
+
+.ok {
+  border-color: rgb(0, 255, 0);
+}
+
+.erro {
+  border-color: red;
 }

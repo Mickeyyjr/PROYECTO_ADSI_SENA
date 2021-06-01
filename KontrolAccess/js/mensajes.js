@@ -2,7 +2,7 @@ function mensajeCorrecto(){
     const contenedor = document.querySelector('.contenedor-mensaje');
      const ok = document.createElement('P');
      ok.classList.add('correcto');
-     ok.textContent = 'Genial! Te has registrado correctamente';
+     ok.textContent = '¡Genial! Te has registrado correctamente';
      contenedor.appendChild(ok);
       setTimeout(() => {
          ok.remove();
@@ -34,3 +34,27 @@ function mensajeCorrecto(){
                  
              }, 5000);
             }
+
+            function mensajeLogin(){
+                const contenedor = document.querySelector('.contenedor-mensaje');
+                 const bad = document.createElement('P');
+                 bad.classList.add('error');
+                 bad.textContent = 'Nombre de usuario o contraseña incorrectos.';
+                 contenedor.appendChild(bad);
+                  setTimeout(() => {
+                     bad.remove();
+                     
+                 }, 5000);
+                }
+
+                function mensajeUsuario(){
+                    const contenedor = document.querySelector('.contenedor-mensaje');
+                     const bad = document.createElement('P');
+                     bad.classList.add('error');
+                     bad.textContent = 'El usuario ya existe.';
+                     contenedor.appendChild(bad);
+                      setTimeout(() => {
+                         bad.remove();
+                         
+                     }, 5000);
+                    }

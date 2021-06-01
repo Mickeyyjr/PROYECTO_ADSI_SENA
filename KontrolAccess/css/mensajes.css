@@ -1,0 +1,41 @@
+.correcto {
+  text-align: center;
+  background-color: rgb(19, 255, 30);
+  color: white;
+  padding: 1rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.error {
+  text-align: center;
+  background-color: red;
+  color: black;
+  padding: 1rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.ok {
+  border-color: rgb(0, 255, 0);
+}
+
+.incorrecto {
+  color: red;
+}
+.incorrecto input {
+  border-color: red;
+}
+.incorrecto select {
+  border-color: red;
+}
+
+.contenedor-mensaje {
+  margin-bottom: 3rem;
+}
+
+.erro {
+  border-color: red;
+}

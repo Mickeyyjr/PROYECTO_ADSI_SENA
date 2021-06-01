@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/registrarse.css">
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/globales.css">
     <link rel="shortcut icon" href="../img/logo.ico" type="image/x-icon">
@@ -15,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/registro.css">
+    <link rel="stylesheet" href="../css/mensajes.css">
     <script src="../js/mensajes.js"></script>
     <title>Registro</title>
 </head>
@@ -33,8 +34,8 @@
         <div class="nav-principal">
             <nav>
                 <a href="../layouts/index.html" class="inicio">Inicio</a>
-                <a href="../layouts/iniciar-sesion.html" class="iniciarSesion">Iniciar sesión</a>
-                <a href="http://localhost:3000/layouts/registrarse.php" class="registrarse">Registrarse</a>
+                <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/iniciar-sesion.php" class="iniciarSesion">Iniciar sesión</a>
+                <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/verificarUsuario.php" class="registrarse">Registrarse</a>
                 <a href="#" class="asistencia">Asistencia</a>
             </nav>
         </div>
@@ -45,10 +46,17 @@
     <div class="formulario contenedor-form">
         <form method="POST" class="formulario-registro">
 
-            <div class="img-logo">
-                <legend><a title="inicio" href="index.html"><img src="../img/1.png" class="img-1" alt="logo-kontrolaccess"></a></legend>
+
+            <div class="title">
+                <p class="titulo">Registro de usuarios nuevos</p>
+            </div>
+
+            <div class="linea">
+
             </div>
             <div class="inputs">
+
+
                 <div class="seccion seccion-tipoid">
                     <label>Tipo de documento de identidad</label>
                     <select name="tipo_id" class="campo tipoId">
@@ -96,22 +104,35 @@
 
             </div>
 
-
-            <div class="inicia-sesion">
-                <input type="submit" name="enviar" value="Crear cuenta" class="btn ">
-                <p class="parrafo">¿Ya tienes una cuenta? <a href="iniciar-sesion.html">Inicia sesión</a></p>
-            </div>
             <div class="contenedor-mensaje">
                 <?php
                 include '../includes/registrarUsuarios.php';
                 ?>
             </div>
 
+            <div class="inicia-sesion">
+                <input type="submit" name="enviar" value="Crear cuenta" class="btn ">
+                <p class="parrafo">¿Ya tienes una cuenta? <a href="iniciar-sesion.html">Inicia sesión</a></p>
+            </div>
+
+
         </form>
 
     </div>
 
+
+
+
+    <footer>
+        <p>Servicio Nacional de Aprendizaje (SENA) | Todos los derecos reservados © </p>
+    </footer>
+
     <script src="../js/validarCampos.js"></script>
+
+    <script>
+        llamarValidadorInput();
+        llamarValidadorSelect();
+    </script>
 
 </body>
 

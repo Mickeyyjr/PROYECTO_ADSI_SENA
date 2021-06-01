@@ -24,9 +24,7 @@ function registrarUsuarios()
 
             if ($resultado) {
 ?>
-                <script>
-                    mensajeCorrecto();
-                </script>
+                <META HTTP-EQUIV="REFRESH" CONTENT="5;URL=../layouts/registrarse2.php">
             <?php
             } else {
             ?>
