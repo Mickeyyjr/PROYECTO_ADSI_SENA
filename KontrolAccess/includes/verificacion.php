@@ -24,7 +24,9 @@ if ($filas) {
 <?php
 
 } else {
-    include("../layouts/registrarse.php");
+?>
+    <META HTTP-EQUIV="REFRESH" CONTENT="5;URL=../layouts/registrarse.php">
+<?php
 }
 mysqli_free_result($resultado);
 mysqli_close($conexion);

@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../css/mensajes.css">
     <script src="../js/mensajes.js"></script>
 
-    <title>Verificiación usuario</title>
+    <title>Registrarse</title>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
                 <nav>
                     <a href="../layouts/index.html" class="inicio">Inicio</a>
                     <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/iniciar-sesion.php" class="iniciarSesion">Iniciar sesión</a>
-                    <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/verificarUsuario.php" class="registrarse">Registrarse</a>
+                    <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/registroVerificacion.php" class="registrarse">Registrarse</a>
                     <a href="#" class="asistencia">Asistencia</a>
                 </nav>
             </div>
@@ -46,10 +46,10 @@
     </header>
 
     <div class="formulario contenedor-form">
-        <form method="POST" action="../includes/verificacion.php" class="formulario-login" autocomplete="off">
+        <form method="POST" action="../includes/verificacion1.php" class="formulario-login" autocomplete="off">
 
             <div class="title">
-                <p class="titulo">Verificiación usuario</p>
+                <p class="titulo">Registrate</p>
             </div>
 
             <div class="linea">
@@ -57,15 +57,10 @@
             </div>
             <div class="inputs">
 
-                <select name="tipo_id" class="campo tipoId">
-                    <option value="seleccione">Seleccione</option>
-                    <option value="CC">Cédula de Ciudadania</option>
-                    <option value="TI">Tarjeta de Identidad</option>
-                    <option value="RC">Registro Civil</option>
-                </select>
+                <input name="email" type="email" placeholder="Email" class="campo campo-password">
 
-                <input name="id" type="number" placeholder="Documento de identidad" class="campo campo-password">
-                <button type="submit" class="btn campo">Validar</button>
+                <input name="password" type="password" placeholder="Password" class="campo campo-password" autocomplete="new-password">
+                <button type="submit" name="enviar" class="btn campo">Continuar</button>
             </div>
 
             <div class="contenedor-mensaje">
@@ -74,6 +69,7 @@
 
 
             <div class="inicia-sesion">
+                <p class="parrafo">¿Ya tienes una cuenta? <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/iniciar-sesion.php">Inicia sesión</a></p>
                 <a href="../layouts/index.html" class="olvisate">Volver al inicio</a>
             </div>
         </form>

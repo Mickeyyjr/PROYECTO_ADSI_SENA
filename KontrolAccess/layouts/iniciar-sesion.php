@@ -37,8 +37,8 @@
             <div class="nav-principal">
                 <nav>
                     <a href="../layouts/index.html" class="inicio">Inicio</a>
-                    <a href="iniciar-sesion.html" class="iniciarSesion">Iniciar sesión</a>
-                    <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/verificarUsuario.php" class="registrarse">Registrarse</a>
+                    <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/iniciar-sesion.php" class="iniciarSesion">Iniciar sesión</a>
+                    <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/registroVerificacion.php" class="registrarse">Registrarse</a>
                     <a href="#" class="asistencia">Asistencia</a>
                 </nav>
             </div>
@@ -70,7 +70,7 @@
 
             <div class="inicia-sesion">
                 <a href="#" class="olvisate">¿Olvidaste tu contraseña?</a>
-                <p class="parrafo">¿Aún no tienes una cuenta?<a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/registrarse.php"> Registrate</a></p>
+                <p class="parrafo">¿Aún no tienes una cuenta?<a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/registroVerificacion.php"> Registrate</a></p>
             </div>
         </form>
     </div>

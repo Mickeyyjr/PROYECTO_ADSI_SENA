@@ -24,8 +24,11 @@ function registrarUsuarios()
 
             if ($resultado) {
 ?>
-                <META HTTP-EQUIV="REFRESH" CONTENT="5;URL=../layouts/registrarse2.php">
+                <script>
+                    mensajeCorrecto();
+                </script>
             <?php
+
             } else {
             ?>
                 <script>
@@ -38,8 +41,39 @@ function registrarUsuarios()
             <script>
                 mensajeCompletar();
             </script>
+            <?php
+        }
+    }
+}
+
+
+function registrarPassword()
+{
+    include 'conexion.php';
+    if (isset($_POST['enviar'])) {
+        if (strlen($_POST['password']) >= 1 && strlen($_POST['password2']) >= 1) {
+            $password = ($_POST['password']);
+            $password2 = ($_POST['password']);
+
+            $insertarPassword = "UPDATE persona SET passwordd='$password' WHERE nombre= 'Aida Janeth'";
+
+            $resultado = mysqli_query($conexion, $insertarPassword);
+
+            if ($resultado) {
+            ?>
+                <h1>FUNCIONOOOOO</h1>
+            <?php
+            } else {
+            ?>
+                <h1>NO FUNCIONOOOOO</h1>
+            <?php
+            }
+        } else {
+            ?>
+            <script>
+                mensajeCompletar();
+            </script>
 <?php
         }
     }
 }
-?>

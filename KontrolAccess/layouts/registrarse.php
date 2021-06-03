@@ -111,7 +111,7 @@
             </div>
 
             <div class="inicia-sesion">
-                <input type="submit" name="enviar" value="Crear cuenta" class="btn ">
+                <input type="submit" name="enviar" value="Siguiente" class="btn ">
                 <p class="parrafo">¿Ya tienes una cuenta? <a href="iniciar-sesion.html">Inicia sesión</a></p>
             </div>
 
