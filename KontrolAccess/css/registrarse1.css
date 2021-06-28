@@ -8,7 +8,7 @@
 
 .formulario-login {
   border: none;
-  background-color: #eeeeee;
+  background-color: #2a2b2b;
   margin-top: 3rem;
   margin-bottom: 8rem;
   width: 40%;
@@ -19,16 +19,31 @@
   margin: 0;
   padding: 0;
   padding-top: 5rem;
-  font-size: 3.4rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 500;
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: var(--blanco);
+  text-align: center;
 }
 
 .linea {
   background-color: var(--azul);
-  padding: 0.2rem;
-  margin-bottom: 6rem;
+  padding: 0.1rem;
+  margin: 3.4rem 0;
+  width: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contenedor-form {
@@ -41,17 +56,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  -webkit-rtl-ordering: none;
+  appearance: none;
+  border-style: none;
 }
 
 .campo {
-  width: 80%;
+  width: 100%;
   margin-top: 1.5rem;
   padding: 1rem 0.2rem;
-  border-color: black;
+
   border-radius: 0.4rem;
-  border-width: 0.1rem;
+  border: 1px solid #666;
   font-size: 1.4rem;
   outline: none;
+  background-color: #383838;
+  color: var(--blanco);
 }
 .img-logo {
   margin-top: 4rem;
@@ -65,14 +85,21 @@
 }
 
 .btn {
-  background-color: var(--negro);
-  color: var(--blanco);
-  border: none;
-  font-weight: 700;
+  background-color: var(--gris);
+  color: var(--azul);
+  font-weight: 500;
   font-size: 1.8rem;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
+  border-radius: 3rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
   cursor: pointer;
+  border: 1px solid var(--azul);
+  width: 30%;
+}
+
+.btn:hover {
+  background-color: var(--azul);
+  color: var(--gris);
 }
 
 fieldset {

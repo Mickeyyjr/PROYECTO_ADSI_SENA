@@ -51,7 +51,7 @@ function mensajeCorrecto(){
                     const contenedor = document.querySelector('.contenedor-mensaje');
                      const bad = document.createElement('P');
                      bad.classList.add('error');
-                     bad.textContent = 'El usuario ya existe.';
+                     bad.textContent = 'Este correo electrónico ya está en uso. Por favor Iniciar sesión.';
                      contenedor.appendChild(bad);
                       setTimeout(() => {
                          bad.remove();

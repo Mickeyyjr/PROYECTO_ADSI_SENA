@@ -11,6 +11,7 @@ const expresionEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 
 
 
+
 const emailUsuario = document.querySelector('.campo-email');
 const passwordUsuario = document.querySelector('.campo-password')
 

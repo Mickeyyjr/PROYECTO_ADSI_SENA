@@ -10,8 +10,8 @@
 
 .error {
   text-align: center;
-  background-color: red;
-  color: black;
+  background-color: var(--gris);
+  color: red;
   padding: 1rem 0;
   font-weight: 700;
   font-size: 1.5rem;
