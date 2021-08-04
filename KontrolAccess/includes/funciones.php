@@ -7,16 +7,16 @@ function registrarUsuarios()
     include 'conexion.php';
 
     if (isset($_POST['enviar'])) {
-        if (strlen($_POST['tipo_id']) >= 1 && strlen($_POST['id_persona']) >= 1 && strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1 && strlen($_POST['email']) >= 1 && strlen($_POST['rol']) >= 1) {
+        if (strlen($_POST['tipo_id']) >= 1 && strlen($_POST['id_usuario']) >= 1 && strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1 && strlen($_POST['email']) >= 1 && strlen($_POST['rol']) >= 1) {
             $tipo_id = ($_POST['tipo_id']);
-            $id_persona = ($_POST['id_persona']);
+            $id_usuario = ($_POST['id_usuario']);
             $nombre = ($_POST['nombre']);
             $apellido = ($_POST['apellido']);
             $email = ($_POST['email']);
             $rol = ($_POST['rol']);
 
-            $insertar = "INSERT INTO persona(tipo_id, id_persona, nombre, apellido, email, rol)
-        VALUES('$tipo_id', '$id_persona', '$nombre', '$apellido', '$email', '$rol');";
+            $insertar = "INSERT INTO usuario(tipo_id, id_usuario, nombre, apellido, email, id_rol, id_jornada)
+        VALUES('$tipo_id', '$id_usuario', '$nombre', '$apellido', '$email', '$rol', NULL);";
 
             $resultado = mysqli_query($conexion, $insertar);
 

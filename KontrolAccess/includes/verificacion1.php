@@ -11,7 +11,7 @@ function verificarUsuario()
 
             include("conexion.php");
 
-            $consulta = "SELECT*FROM persona WHERE email = '$email'";
+            $consulta = "SELECT*FROM usuario WHERE email = '$email'";
             $resultado = mysqli_query($conexion, $consulta);
 
             $filas = mysqli_num_rows($resultado);
