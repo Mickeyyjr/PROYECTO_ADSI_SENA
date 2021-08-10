@@ -34,7 +34,7 @@ include '../includes/header.php';
 
                 <div class="seccion seccion-idpersona">
                     <label>Número de documento</label>
-                    <input type="number" name="id_persona" placeholder="Ingrese numero de documento" class="campo" id="idPersona">
+                    <input type="number" name="id_usuario" placeholder="Ingrese numero de documento" class="campo" id="idPersona">
 
                 </div>
 
@@ -58,11 +58,11 @@ include '../includes/header.php';
                     <label>Rol</label>
                     <select name="rol" class="campo rol">
                         <option value="seleccione">Seleccione</option>
-                        <option value="estudiante">Estudiante</option>
-                        <option value="docente">Docente</option>
-                        <option value="directivo">Directivo</option>
-                        <option value="acudiente">Acudiente</option>
-                        <option value="empleado">Empleado</option>
+                        <option value="1">Estudiante</option>
+                        <option value="2">Docente</option>
+                        <option value="3">Directivo</option>
+                        <option value="4">Acudiente</option>
+                        <option value="5">Empleado</option>
                     </select>
                 </div>
 

@@ -8,7 +8,7 @@ $_SESSION['email'] = $email;
 
 include("conexion.php");
 
-$consulta = "SELECT*FROM persona WHERE email='$email' AND id_persona = '$id'";
+$consulta = "SELECT*FROM usuario WHERE email='$email' AND id_usuario = '$id'";
 $resultado = mysqli_query($conexion, $consulta);
 
 $filas = mysqli_num_rows($resultado);
