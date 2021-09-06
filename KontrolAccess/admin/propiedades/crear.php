@@ -1,16 +1,17 @@
 <?php
-include '../includes/header.php';
+require '../../includes/header_propiedades.php';
 ?>
 
-<link rel="stylesheet" href="../css/registrarse.css">
-
+<link rel="stylesheet" href="../../css/registrarse.css">
 <body>
+
+<a href="../index.php" class="btn">Volver</a>
     <div class="formulario contenedor-form">
         <form method="POST" class="formulario-registro">
 
             <div class="encabezado">
                 <div class="title">
-                    <p class="titulo">Genial, ya estas a un paso de ser uno de nosotros.</p>
+                    <p class="titulo">Nuevo usuario</p>
                 </div>
 
                 <div class="linea">
@@ -70,13 +71,12 @@ include '../includes/header.php';
 
             <div class="contenedor-mensaje">
                 <?php
-                include '../includes/registrarUsuarios.php';
+                include '../../includes/registrarUsuarios.php';
                 ?>
             </div>
 
             <div class="inicia-sesion">
-                <input type="submit" name="enviar" value="Siguiente" class="btn ">
-                <p class="parrafo">¿Ya tienes una cuenta? <a href="iniciar-sesion.html">Inicia sesión</a></p>
+                <input type="submit" name="enviar" value="Registrar usuario" class="btn ">
             </div>
 
 
@@ -87,11 +87,9 @@ include '../includes/header.php';
 
 
 
-    <?php
-    include '../includes/footer.php';
-    ?>
+    
 
-    <script src="../js/validarCampos.js"></script>
+    <script src="../../js/validarCampos.js"></script>
 
     <script>
         llamarValidadorInput();
@@ -101,3 +99,11 @@ include '../includes/header.php';
 </body>
 
 </html>
+
+
+
+
+<?php
+require '../../includes/footer.php';
+?>
+

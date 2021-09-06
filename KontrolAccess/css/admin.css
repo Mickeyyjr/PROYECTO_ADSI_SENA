@@ -1,0 +1,61 @@
+html {
+    font-size: 62.5%; /*Hack para convertir 10px = 1rem*/
+    box-sizing: border-box; /*Hack para box model*/
+    scroll-snap-type: y mandatory;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.registros{
+    margin-top:0;
+    width: 80%;
+    color:white;
+    font-size: 1.5rem;
+
+}
+
+thead th{
+    background-color: var(--azul);
+    margin: 0;
+    padding: 0;
+    color: var(--gris);
+    padding: 0.7rem;
+}
+
+tbody td{
+    background-color: var(--blanco);
+    color: var(--gris);
+    padding: 1rem;
+}
+
+tbody a{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    color: var(--gris);
+    border-radius: 0.5rem;
+}
+
+.actualizar{
+    background-color: rgb(83, 255, 92);
+    margin-bottom: 0.5rem;
+}
+
+.actualizar:hover{
+    color: rgb(83, 255, 92);
+    background-color: var(--gris);
+}
+
+.eliminar{
+    background-color: rgb(255, 61, 61);
+    border-radius: 0.5rem;
+}
+
+.eliminar:hover{
+    color: rgb(255, 61, 61);
+    background-color: var(--gris);
+}

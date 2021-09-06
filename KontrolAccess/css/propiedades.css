@@ -1,0 +1,17 @@
+
+h1{
+    color: var(--blanco);
+    font-size: 4rem;
+}
+
+.contenedorxd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.botones{
+    display: flex;
+    gap: 5rem;
+}
