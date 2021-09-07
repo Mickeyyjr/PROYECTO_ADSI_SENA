@@ -7,16 +7,16 @@ function registrarUsuarios()
     include 'conexion.php';
 
     if (isset($_POST['enviar'])) {
-        if (strlen($_POST['tipo_id']) >= 1 && strlen($_POST['id_usuario']) >= 1 && strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1 && strlen($_POST['email']) >= 1 && strlen($_POST['rol']) >= 1) {
-            $tipo_id = ($_POST['tipo_id']);
-            $id_usuario = ($_POST['id_usuario']);
-            $nombre = ($_POST['nombre']);
-            $apellido = ($_POST['apellido']);
+        if (strlen($_POST['tipo_doc']) >= 1 && strlen($_POST['documento']) >= 1 && strlen($_POST['nombres']) >= 1 && strlen($_POST['apellidos']) >= 1 && strlen($_POST['email']) >= 1 && strlen($_POST['rol']) >= 1) {
+            $tipo_doc = ($_POST['tipo_doc']);
+            $documento = ($_POST['documento']);
+            $nombres = ($_POST['nombres']);
+            $apellidos = ($_POST['apellidos']);
             $email = ($_POST['email']);
             $rol = ($_POST['rol']);
 
-            $insertar = "INSERT INTO usuario(tipo_id, id_usuario, nombre, apellido, email, id_rol, id_jornada)
-        VALUES('$tipo_id', '$id_usuario', '$nombre', '$apellido', '$email', '$rol', NULL);";
+            $insertar = "INSERT INTO usuario(tipo_doc, documento, nombres, apellidos, email, id_rol, id_jornada)
+        VALUES('$tipo_doc', '$documento', '$nombres', '$apellidos', '$email', '$rol', NULL);";
 
             $resultado = mysqli_query($conexion, $insertar);
 

@@ -33,10 +33,11 @@ require '../../includes/header_propiedades.php';
     <table class="registros">
     <thead>
         <tr>
-            <th>Tipo id</th>
             <th>Id</th>
-            <th>Nombre</th>
-            <th>Apellido</th>
+            <th>Tipo documento</th>
+            <th>Documento</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
             <th>Email</th>
             <th>Rol</th>
             <th>Jornada</th>
@@ -47,15 +48,16 @@ require '../../includes/header_propiedades.php';
     <tbody>
         <?php while($usuario = mysqli_fetch_assoc($resultadoConsulta)) :  ?>
         <tr>
-            <td><?php echo $usuario['tipo_id'];   ?></td>
             <td><?php echo $usuario['id_usuario'];   ?></td>
-            <td><?php echo $usuario['nombre'];   ?></td>
-            <td><?php echo $usuario['apellido'];   ?></td>
+            <td><?php echo $usuario['tipo_doc'];   ?></td>
+            <td><?php echo $usuario['documento'];   ?></td>
+            <td><?php echo $usuario['nombres'];   ?></td>
+            <td><?php echo $usuario['apellidos'];   ?></td>
             <td><?php echo $usuario['email'];   ?></td>
             <td><?php echo $usuario['id_rol'];   ?></td>
             <td><?php echo $usuario['id_jornada'];   ?></td>
             <td>
-                <a href="" class="actualizar">Actualizar</a>
+                <a href="actualizar.php" class="actualizar">Actualizar</a>
                 <a href="" class="eliminar">Eliminar</a>
             </td>
         </tr>
