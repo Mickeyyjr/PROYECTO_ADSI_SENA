@@ -1,7 +1,7 @@
 .correcto {
   text-align: center;
   background-color: rgb(19, 255, 30);
-  color: white;
+  color: var(--gris);
   padding: 1rem 0;
   font-weight: 700;
   font-size: 1.5rem;
