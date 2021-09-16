@@ -77,3 +77,19 @@ function registrarPassword()
         }
     }
 }
+
+
+// Esta funcion nos va a retornar un valor booleano, si retorna true, quiere decir que hay una sesion activa, si retorna false, quiere decir que no hay ninguna sesion activa
+function estaAutenticado(): bool {
+     //Se inicia la sesión
+     session_start();
+
+     //Se verifica que la sesion haya sido iniciada
+     $auth = $_SESSION['login'];
+
+     if($auth){
+         return true;
+     }
+
+     return false;
+}

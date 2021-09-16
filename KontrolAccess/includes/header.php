@@ -1,3 +1,17 @@
+<?php
+
+//Se verifica que la superglobal $_SESSION exista, si no existe se inicia la sesion con session_start para poder acceder a ella
+if(!isset($_SESSION)){
+    session_start();
+}
+
+//Se crea una variable a traves de la super global, si tiene un atributo login retorna true que quiere decir que el usuario tiene una sesion activa, si no existe automaticamente se le asigna false que quiere decir que no hay ninguna sesion activa
+$auth = $_SESSION['login'] ?? false;
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,14 +38,22 @@
     <header>
         <div class="contenedor-header">
             <div class="logo">
-                <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/index.php"><img src="../img/kontrol-access-blanco.png" alt="logo" class="logoo"></a>
+                <a href="../layouts/index.php"><img src="../img/kontrol-access-blanco.png" alt="logo" class="logoo"></a>
             </div>
 
 
             <div class="navegacion">
-                <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/index.php">Inicio</a>
-                <a href="http://localhost/PROYECTO_ADSI_SENA/KontrolAccess/layouts/iniciar-sesion.php">Iniciar sesion</a>
-                <a href="#" class="ultimo">Asistencia</a>
+                <a href="../layouts/index.php">Inicio</a>
+                <a href="../layouts/iniciar-sesion.php">Iniciar sesion</a>
+                <a href="#">Asistencia</a>
+
+                <!--Se revisa si la variable $auth, si retornó true se ejecuta el siguiente código-->
+                <?php if($auth) :?>
+
+                    <!--Se genera un enlace de cerrar sesión si la variable $auth retorno true, esto quiere decir que el usuario tiene una sesion activa-->
+                    <a href="../includes/cerrar_sesion.php" class="ultimo">Cerrar sesion</a>
+
+                <?php endif; ?>
             </div>
         </div>
     </header>

@@ -7,6 +7,8 @@ html {
   }
 
 
+
+
 .registros{
     margin-top:0;
     width: 80%;
@@ -24,8 +26,8 @@ thead th{
 }
 
 tbody td{
-    background-color: var(--blanco);
-    color: var(--gris);
+    background-color: var(--gris);
+    color: var(--blanco);
     padding: 1rem;
 }
 
@@ -41,21 +43,37 @@ tbody a{
 }
 
 .actualizar{
-    background-color: rgb(83, 255, 92);
+    color: rgb(83, 255, 92);
+    background-color: (--gris);
     margin-bottom: 0.5rem;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: rgb(83, 255, 92);
 }
 
 .actualizar:hover{
-    color: rgb(83, 255, 92);
-    background-color: var(--gris);
+    background-color: rgb(83, 255, 92);
+    color: var(--gris);
 }
 
 .eliminar{
-    background-color: rgb(255, 61, 61);
+    background-color: var(--gris);
+    color: rgb(255, 61, 61);
     border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+    border-width: 0;
+    margin: 0;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color:rgb(255, 61, 61);
 }
 
 .eliminar:hover{
-    color: rgb(255, 61, 61);
-    background-color: var(--gris);
+    background-color: rgb(255, 61, 61);
+    color: var(--gris);
+    cursor: pointer;
+}
+
+form{
+    width: 0;
 }

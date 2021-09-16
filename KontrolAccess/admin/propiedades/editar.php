@@ -1,16 +1,37 @@
 <?php
 
-//importar la conexion
 
-require '../../includes/conexion.php';
+require '../../includes/funciones.php';
 
-//Escribir el query
+$auth = estaAutenticado();
 
+//Si la $_SESSION['login] retorna un false o se encuentra vacia se ejecuta el siguiente código
+if(!$auth){
+    header ('Location: ../layouts/index.php'); //Si la sesion no ha sido iniciada se redirecciona a la página de inicio
+}
+
+
+
+//Conectar a la base de datos
+require '../../includes/conexion.php'; //Se importa el archivo donde se encuentra la conexión
+$db = conectarDB(); //Se llama la función que hace la conexión a la db
+
+//Se hace la consulta a la base de datos
 $query = "SELECT * FROM usuario"; 
 
-//Consultar la BD
 
-$resultadoConsulta = mysqli_query($conexion, $query);
+$resultadoConsulta = mysqli_query($db, $query);
+
+
+//Eliminar usuario
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $id = (int)($_POST['id_usuario']);
+    $query = "DELETE FROM usuario WHERE id_usuario = $id ";
+    $resultado = mysqli_query($db, $query);
+
+   if($resultado){
+       header("location: ../index.php?request=3");
+   }}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
 ?>
 
@@ -57,8 +78,12 @@ require '../../includes/header_propiedades.php';
             <td><?php echo $usuario['id_rol'];   ?></td>
             <td><?php echo $usuario['id_jornada'];   ?></td>
             <td>
-                <a href="actualizar.php" class="actualizar">Actualizar</a>
-                <a href="" class="eliminar">Eliminar</a>
+                <a href="actualizar.php?id=<?php echo $usuario['id_usuario']; ?>" class="actualizar">Actualizar</a>
+                <!--Se crea este formulario para al darle submit, envia el id del usuario para eliminarlo-->
+                <form method="POST">
+                <input type="hidden" name="id_usuario" value="<?php echo $usuario['id_usuario']; ?>">
+                <input type="submit" value="Eliminar" class="eliminar" >
+                </form>
             </td>
         </tr>
         <?php endwhile;?>

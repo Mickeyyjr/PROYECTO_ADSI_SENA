@@ -10,6 +10,34 @@ function mensajeCorrecto(){
      }, 5000);
     }
 
+
+
+    function mensajeActualizar(){
+        const contenedor = document.querySelector('.contenedor-mensaje');
+         const ok = document.createElement('P');
+         ok.classList.add('correcto');
+         ok.textContent = '¡Genial! Usuario actualizado correctamente';
+         contenedor.appendChild(ok);
+          setTimeout(() => {
+             ok.remove();
+             
+         }, 5000);
+        }
+
+
+        function mensajeEliminar(){
+            const contenedor = document.querySelector('.contenedor-mensaje');
+             const ok = document.createElement('P');
+             ok.classList.add('correcto');
+             ok.textContent = '¡Genial! Usuario eliminado correctamente';
+             contenedor.appendChild(ok);
+              setTimeout(() => {
+                 ok.remove();
+                 
+             }, 5000);
+            }
+
+
     function mensajeError(){
         const contenedor = document.querySelector('.contenedor-mensaje');
          const superBad = document.createElement('P');

@@ -1,16 +1,25 @@
 <?php
 
-//importar la conexion
+require '../../includes/funciones.php';
 
-require '../../includes/conexion.php';
+$auth = estaAutenticado();
 
-//Escribir el query
+//Si la $_SESSION['login] retorna un false o se encuentra vacia se ejecuta el siguiente código
+if(!$auth){
+     header ('Location: ../layouts/index.php'); //Si la sesion no ha sido iniciada se redirecciona a la página de inicio
+}
 
+
+//Conectar a la base de datos
+require '../../includes/conexion.php'; //Se importa el archivo donde se encuentra la conexión
+$db = conectarDB(); //Se llama la función que hace la conexión a la db
+
+//Se hace la consulta a la base de datos
 $query = "SELECT * FROM usuario"; 
 
-//Consultar la BD
 
-$resultadoConsulta = mysqli_query($conexion, $query);
+$resultadoConsulta = mysqli_query($db, $query);
+
 
 ?>
 
